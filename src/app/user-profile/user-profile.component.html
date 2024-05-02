@@ -1,0 +1,21 @@
+<div class="contact-container">
+
+    <div class="contact-photo">
+        <img [src]="user.photo" alt="Photo de profil de l'utilisateur" />
+    </div>
+
+    <div class="contact-info">
+        <p>Nom : {{user.name}}</p>
+        <p>Prénom : {{user.firstName}}</p>
+        <p [hidden]="!isAgeDisplay">Age : {{ user.age }}</p>
+    </div>
+
+    <div class="contact-citation">
+        <p>{{ user.quote }}</p>
+        <input type="text" [(ngModel)]="user.quote" />
+    </div>
+
+    <hr />
+
+    <button type="button" (click)=" toggleAgeDisplay()">Afficher/Masquer l'âge</button>
+</div>
